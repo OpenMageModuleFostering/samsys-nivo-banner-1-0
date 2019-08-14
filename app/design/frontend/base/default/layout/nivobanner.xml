@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sam-sys
+ * @category   nivobanner
+ * @package    Samsys_Nivobanner
+ * @copyright  Copyright (c) 2010-2011 sam-sys pvt ltd. (http://www.sam-sys.in)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+ -->
+<layout version="0.1.0">
+	<!--include our js and css file. should be enclosed in default tag-->
+	<!--<default>
+		<reference name="head">
+				 <action method="addItem"><type>skin_js</type><name>nivobanner/js/jquery-1.9.0.min.js</name></action>
+				   <action method="addItem"><type>skin_js</type><name>nivobanner/js/jquery.nivo.slider.js</name></action>
+				   <action method="addCss"><stylesheet>nivobanner/nivo-slider.css</stylesheet></action>
+			</reference>
+	</default>-->
+    <nivobanner_index_index>
+	  <reference name="content">
+            <block type="nivobanner/nivobanner" name="nivobanner.home"  template="nivobanner/nivobanner.phtml" >
+				<!--<action method="setData">
+					<name>banner_group_code</name>
+					<value>home_banner</value>
+				</action>-->
+			</block>
+        </reference>
+    </nivobanner_index_index>
+</layout>
