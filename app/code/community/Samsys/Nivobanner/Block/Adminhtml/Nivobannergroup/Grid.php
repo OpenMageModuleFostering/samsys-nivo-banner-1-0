@@ -18,8 +18,7 @@ class Samsys_Nivobanner_Block_Adminhtml_Nivobannergroup_Grid extends Mage_Adminh
 
     protected function _prepareCollection() {
         $collection = Mage::getModel('nivobanner/nivobannergroup')->getCollection();
-        //$collection->getSelect()->columns(array('banner_effect' => 'if((animation_type=0),pre_banner_effects,banner_effects)'));
-		$collection->getSelect()->columns();
+        $collection->getSelect()->columns();
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }

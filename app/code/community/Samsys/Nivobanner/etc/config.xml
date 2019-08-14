@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 <config>
-	<!--initialize the version for the module-->
 	<modules>
 		<Samsys_Nivobanner>
 			<version>1.0</version>
 		</Samsys_Nivobanner>
 	</modules>
-	<!--define the frontend module router and class name-->
 	<frontend>
 		<routers>
 			<nivobanner>
@@ -17,7 +15,6 @@
 				</args>
 			</nivobanner>
 		</routers>
-		<!--define the layout file to use in frontend-->
 		<layout>
 			<updates>
 				<nivobanner>
@@ -26,7 +23,6 @@
 			</updates>
 		</layout>
 	</frontend>
-	<!--define admin end module router and class name-->
 	<admin>
 		<routers>
 			<nivobanner>
@@ -38,14 +34,11 @@
 			</nivobanner>
 		</routers>
 	</admin>
-	<!--define admin end module links and urls-->
 	<adminhtml>
-		<!--define menu links and name-->
 		<menu>
 			<nivobanner module="nivobanner">
 				<title>Nivobanner</title>
 				<sort_order>75</sort_order>
-				<!--define the submenu links and name-->
 				<children>
 					<nivobanner module="nivobanner">
 						<title>Manage Banners</title>
@@ -60,7 +53,6 @@
 				</children>
 			</nivobanner>
 		</menu>
-		<!--after creating menu's, allow the menu access permisssion-->
 		<acl>
 			<resources>
 				<all>
@@ -84,7 +76,6 @@
 				</admin>
 			</resources>
 		</acl>
-		<!--include your admin layout file-->
 		<layout>
             <updates>
                 <nivobanner>
@@ -92,7 +83,6 @@
                 </nivobanner>
             </updates>
         </layout>
-		<!--initiate the translation file-->
 		<translate>
             <modules>
                 <Samsys_Nivobanner>
@@ -103,7 +93,6 @@
             </modules>
         </translate>
 	</adminhtml>
-	<!--define the global parameters such as helper file, model, block-->
 	 <global>
 	 <models>
             <nivobanner>

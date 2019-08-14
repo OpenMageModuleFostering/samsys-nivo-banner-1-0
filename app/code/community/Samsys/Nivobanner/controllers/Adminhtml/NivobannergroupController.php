@@ -84,8 +84,6 @@ class Samsys_Nivobanner_Adminhtml_NivobannergroupController extends Mage_Adminht
             }
             $bannerIds = array_intersect($availBannerIds, $banners);
             $data['banner_ids'] = implode(',', $bannerIds);
-           /* $data['banner_effects'] = (($data['animation_type'] == 0) ? '' : $data['banner_effects']);
-            $data['pre_banner_effects'] = (($data['animation_type'] == 0) ? $data['pre_banner_effects'] : '');*/
             $model = Mage::getModel('nivobanner/nivobannergroup');
             $model->setData($data)
                     ->setId($this->getRequest()->getParam('id'));
@@ -124,8 +122,7 @@ class Samsys_Nivobanner_Adminhtml_NivobannergroupController extends Mage_Adminht
         if ($this->getRequest()->getParam('id') > 0) {
             try {
                 $model = Mage::getModel('nivobanner/nivobannergroup')->load($this->getRequest()->getParam('id'));
-				//$filePath = Mage::getBaseDir('media') . DS . 'nivo' . DS . 'banner' . DS . 'thumb' . DS . $model->getGroupCode(); 
-                $filePath = Mage::getBaseDir('media') . DS . 'nivo' . DS . 'banner' . DS . 'Nivo_' . $model->getGroupCode();              
+				$filePath = Mage::getBaseDir('media') . DS . 'nivo' . DS . 'banner' . DS . 'Nivo_' . $model->getGroupCode();              
                 $model->delete();
                 $this->removeFile($filePath);
 
@@ -147,8 +144,7 @@ class Samsys_Nivobanner_Adminhtml_NivobannergroupController extends Mage_Adminht
             try {
                 foreach ($bannerIds as $bannerId) {
                     $banner = Mage::getModel('nivobanner/nivobannergroup')->load($bannerId);
-                    //$filePath = Mage::getBaseDir('media') . DS . 'nivo' . DS . 'banner' . DS . 'thumb' . DS . $banner->getGroupCode();
-					 $filePath = Mage::getBaseDir('media') . DS . 'nivo' . DS . 'banner' . DS . 'Nivo_' . $banner->getGroupCode();
+                    $filePath = Mage::getBaseDir('media') . DS . 'nivo' . DS . 'banner' . DS . 'Nivo_' . $banner->getGroupCode();
                     $banner->delete();
                     $this->removeFile($filePath);
                 }
